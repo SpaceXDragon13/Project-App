@@ -28,7 +28,6 @@ const app = initializeApp(firebaseConfig);
        <NavigationContainer>
         <RootStackScreen />
       </NavigationContainer> 
-        {/*<DrawerScreen /> */}
     </View>
   );
 }
