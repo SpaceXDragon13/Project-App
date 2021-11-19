@@ -2,14 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Icon,
 ScrollView, TextInput } from 'react-native';
 import Product from '../common/Product';
-
-const Home = () => {
+import Detail from './Detail';
+const Home = ({navigation}) => {
     return(
         <View style={styles.container}>
             <ScrollView
             showsVerticalScrollIndicator={false}
             style={{
-                //backgroundColor:"#fff",
                 paddingHorizontal:10
             }}
             >   
@@ -30,7 +29,7 @@ const Home = () => {
                             name="Intel Core i7-10700KA"
                             desc="Compatible with Intel 400 series chipset based motherboards"
                             price="₱20,500.00"
-                            onPress={() => this.props.navigation.navigate('Detail')}
+                            onPress={() => {navigation.navigate('Detail') } }
                             />
                         <Product 
                             src={require('../images/Intel2.jpg')}
@@ -202,7 +201,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#a9957b',
-        paddingBottom: 50
+        paddingBottom: 20
     },
     inputSearch: {
         position: 'absolute',
