@@ -8,6 +8,7 @@ import CategoryScreen from "./screens/Categories";
 import CartScreen from "./screens/Cart";
 import AboutUsScreen from "./screens/AboutUs";
 import ContactScreen from "./screens/Contact";
+import DetailScreen from "./screens/Detail";
 
 function Home({navigation}) {
 	return <Home />;
@@ -29,6 +30,10 @@ function Contact({navigation}) {
 	return <Contact />;
 }
 
+function Detail({navigation}) {
+	return <Detail />;
+}
+
 const Drawer = createDrawerNavigator();
 
 export default function DrawerScreen() {
@@ -40,6 +45,8 @@ export default function DrawerScreen() {
                 <Drawer.Screen name="Cart" component={CartScreen} />
                 <Drawer.Screen name="About Us" component={AboutUsScreen} />
                 <Drawer.Screen name="Contact" component={ContactScreen} />
+				<Drawer.Screen name="Detail" component={DetailScreen} 
+					options={{drawerItemStyle: { height: 0 }}} />
 			</Drawer.Navigator>
 		</NavigationContainer>
 	);
